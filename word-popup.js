@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () =>
             const definition = word.dataset.definition || "No definition found.";
             tooltip.textContent = definition;
             const rect = word.getBoundingClientRect();
-            tooltip.style.top = `${rect.top + window.scrollY - 8}px`;
+            tooltip.style.top = `${rect.top + window.scrollY - 125}px`;
             tooltip.style.left = `${rect.left + (rect.width / 2) + window.scrollX}px`;
             tooltip.classList.remove('hidden');
         });
