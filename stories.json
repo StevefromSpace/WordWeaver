@@ -19,5 +19,12 @@
     "description": "A Short Story on magic",
     "level": "Hard",
     "filename": "stories/placeholderstory.html"
+  },
+  {
+    "id": "story4",
+    "title": "Oak Tree",
+    "description": "A story about the mighty oak tree",
+    "level": "Medium",
+    "filename": "stories/placeholderstory.html"
   }
 ]
