@@ -1,0 +1,23 @@
+[
+  {
+    "id": "story1",
+    "title": "A Short Story",
+    "description": "A Short Story",
+    "level": "Easy",
+    "filename": "stories/placeholderstory.html"
+  },
+  {
+    "id": "story2",
+    "title": "A Short Story",
+    "description": "A Short Story",
+    "level": "Medium",
+    "filename": "stories/placeholderstory.html"
+  },
+  {
+    "id": "story3",
+    "title": "A Short Story",
+    "description": "A Short Story on magic",
+    "level": "Hard",
+    "filename": "stories/placeholderstory.html"
+  }
+]
