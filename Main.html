@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWeaver - Learn Through Stories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 WordWeaver</h1>
+        <p>Hover Over a Word to See its Meaning</p>
+    </header>
+
+    <main>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <p>In each story, simply hover over a <strong>bolded word</strong> to see its definition.</p>
+            
+            <div class="story-example">
+                <p>
+                    The air was heavy and 
+                    <!-- Simple data-definition -->
+                    <span class="vocab-word" data-definition="Having a heavy, damp, and unpleasant smell.">musty</span> 
+                    as Elara entered the ancient library. Dust motes danced in the single 
+                    <span class="vocab-word" data-definition="A narrow beam or stream of light.">shaft</span> 
+                    of light that pierced the gloom.
+                </p>
+            </div>
+        </section>
+
+        <!-- 
+          This section is now filled by script.js and stories.json
+        -->
+        <section class="story-library">
+            <h2>Choose Your Adventure</h2>
+            
+            <!-- This container will be filled with story cards -->
+            <div id="story-library-container">
+                <!-- script.js will put stories here -->
+            </div>
+
+        </section>
+        <hr>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WordWeaver Stories</p>
+    </footer>
+
+    <!-- 
+      This is the simple tooltip box.
+      It's hidden by default and used by word-popup.js
+    -->
+    <div id="vocab-tooltip" class="hidden"></div>
+
+    <!-- 
+      Load BOTH scripts:
+      1. script.js - To build the story list
+      2. word-popup.js - To power the "How It Works" demo
+    -->
+    <script src="script.js"></script>
+    <script src="word-popup.js"></script>
+
+</body>
+</html>
