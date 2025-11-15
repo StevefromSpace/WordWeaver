@@ -8,23 +8,9 @@
   },
   {
     "id": "story2",
-    "title": "A Short Story",
-    "description": "A Short Story",
-    "level": "Medium",
-    "filename": "stories/placeholderstory.html"
-  },
-  {
-    "id": "story3",
-    "title": "A Short Story",
-    "description": "A Short Story on magic",
-    "level": "Hard",
-    "filename": "stories/placeholderstory.html"
-  },
-  {
-    "id": "story4",
     "title": "Oak Tree",
-    "description": "A story about the mighty oak tree",
+    "description": "A story about a small sapling that grows into a guardian of the forest.",
     "level": "Medium",
-    "filename": "stories/placeholderstory.html"
+    "filename": "stories/story1.html"
   }
 ]
