@@ -1,16 +1,16 @@
 [
   {
     "id": "story1",
-    "title": "A Short Story",
-    "description": "A Short Story",
-    "level": "Easy",
-    "filename": "stories/placeholderstory.html"
-  },
-  {
-    "id": "story2",
     "title": "The Mighty Oak Tree",
     "description": "A story about a small sapling that grows into a guardian of the forest.",
     "level": "Medium",
     "filename": "stories/story1.html"
+  },
+  {
+    "id": "story2",
+    "title": "The Towering Oak and the Willowy Bamboo",
+    "description": "A story about a small sapling that grows into a guardian of the forest.",
+    "level": "Medium",
+    "filename": "stories/story2.html"
   }
 ]
