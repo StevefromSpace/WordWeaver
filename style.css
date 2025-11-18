@@ -1,24 +1,20 @@
+/* STYLE.CSS */
+
 /* --- 1. Global & Root Styles --- */
 :root {
-    --primary-color: #4a90e2; /* A nice, friendly blue */
+    --primary-color: #4a90e2;
     --primary-dark: #3a7bc8;
-    --secondary-color: #f5a623; /* A warm, encouraging orange */
+    --secondary-color: #f5a623;
     --light-gray: #f9f9f9;
     --medium-gray: #e0e0e0;
     --dark-gray: #555;
     --text-color: #333;
     --bg-color: #ffffff;
-
     --border-radius: 8px;
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Basic Reset & Font */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -30,257 +26,106 @@ body {
     min-height: 100vh;
 }
 
-main {
-    flex-grow: 1;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1, h2, h3, h4 {
-    margin-bottom: 0.75em;
-    color: var(--dark-gray);
-    line-height: 1.2;
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid var(--medium-gray);
-    margin: 40px 0;
-}
+main { flex-grow: 1; width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+h1, h2, h3, h4 { margin-bottom: 0.75em; color: var(--dark-gray); line-height: 1.2; }
+p { margin-bottom: 1em; }
+hr { border: none; border-top: 1px solid var(--medium-gray); margin: 40px 0; }
 
 /* --- 2. Header & Footer --- */
 header {
-    width: 100%;
-    background-color: var(--bg-color);
-    padding: 20px 40px;
-    text-align: center;
-    border-bottom: 1px solid var(--medium-gray);
+    width: 100%; background-color: var(--bg-color); padding: 20px 40px;
+    text-align: center; border-bottom: 1px solid var(--medium-gray);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-
-header h1 {
-    color: var(--primary-color);
-    margin-bottom: 0.25em;
-}
+header h1 { color: var(--primary-color); margin-bottom: 0.25em; }
 
 footer {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: var(--bg-color);
-    border-top: 1px solid var(--medium-gray);
-    color: #888;
-    font-size: 0.9em;
-    margin-top: auto;
-    background-color: #f7d1d1;
+    width: 100%; text-align: center; padding: 20px;
+    background-color: var(--bg-color); border-top: 1px solid var(--medium-gray);
+    color: #888; font-size: 0.9em; margin-top: auto;
 }
 
 /* --- 3. Story Library --- */
-.story-library {
-    width: 100%;
-}
-
-/* This is the container our JS will fill */
+.story-library { width: 100%; }
 #story-library-container {
     display: grid;
-    /* Create responsive columns: 
-       - 1 column on small screens
-       - 2 or 3 on larger screens
-    */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-
-/* This is the style for each individual story card */
 .story-card {
-    background-color: var(--bg-color);
-    border: 1px solid var(--medium-gray);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 24px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--bg-color); border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius); box-shadow: var(--box-shadow);
+    padding: 24px; transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.story-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); }
+.story-card h3 { color: var(--primary-color); margin-bottom: 8px; }
+.story-card p { font-size: 0.95em; margin-bottom: 16px; color: #666; }
 
-.story-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.story-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 8px;
-}
-
-.story-card p {
-    font-size: 0.95em;
-    margin-bottom: 16px;
-    color: #666;
-}
-
-/* Style for the "Read Story" button */
 .button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
+    display: inline-block; background-color: var(--primary-color); color: #ffffff;
+    text-decoration: none; padding: 10px 16px; border-radius: 5px;
+    font-weight: 600; transition: background-color 0.2s ease;
 }
-
-.button:hover {
-    background-color: var(--primary-dark);
-}
+.button:hover { background-color: var(--primary-dark); }
 
 /* --- 4. "How It Works" Demo --- */
 .story-example {
-    background-color: var(--bg-color);
-    border: 1px dashed var(--medium-gray);
-    border-radius: var(--border-radius);
-    padding: 20px;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    line-height: 1.7;
+    background-color: var(--bg-color); border: 1px dashed var(--medium-gray);
+    border-radius: var(--border-radius); padding: 20px;
+    font-family: 'Georgia', 'Times New Roman', Times, serif; line-height: 1.7;
 }
-
 .vocab-word {
-    font-weight: bold;
-    color: var(--primary-color);
-    cursor: pointer;
+    font-weight: bold; color: var(--primary-color); cursor: pointer;
     text-decoration: underline dashed var(--medium-gray) 1px;
-    text-underline-offset: 3px;
-    transition: color 0.2s ease, background-color 0.2s ease;
-    /* This makes the hover-box positioning more stable */
+    text-underline-offset: 3px; transition: color 0.2s ease, background-color 0.2s ease;
     position: relative; 
 }
-
-.vocab-word:hover {
-    color: var(--primary-dark);
-    background-color: #e6f0ff;
-}
+.vocab-word:hover { color: var(--primary-dark); background-color: #e6f0ff; }
 
 /* --- 5. Story Page Styles --- */
 .story-header {
-    height: 50px;
-    width: 100%;
-    max-width: 850px;
-    margin: 20px auto;
-    padding: 0 25px; /* Match main padding */
-    align-items: center;
-    justify-content: center;
+    height: 50px; width: 100%; max-width: 850px; margin: 20px auto;
+    padding: 0 25px; align-items: center; justify-content: center;
 }
-
 .button-back {
-    background-color: skyblue;
-    font-size: 0.9em;
-    height: 40px;
-    border: none;
-    padding: 0 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    justify-content: center;
+    background-color: skyblue; font-size: 0.9em; height: 40px; border: none;
+    padding: 0 15px; border-radius: 8px; cursor: pointer; display: inline-flex;
+    align-items: center; justify-content: center; color: #fff;
 }
-.button-back:hover {
-    background-color: #555;
-    color: white;
-}
+.button-back:hover { background-color: #555; color: white; }
 
 .story-container {
-    background-color: var(--bg-color);
-    padding: 40px;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--medium-gray);
-    max-width: 900px;
-    margin: 0 auto 40px auto;
+    background-color: var(--bg-color); padding: 40px;
+    border-radius: var(--border-radius); border: 1px solid var(--medium-gray);
+    max-width: 900px; margin: 0 auto 40px auto;
 }
-
-.story-container h1 {
-    color: var(--primary-color);
-}
-
-.story-level {
-    font-style: italic;
-    color: #888;
-    margin-top: -1em;
-    margin-bottom: 2em;
-}
-
+.story-container h1 { color: var(--primary-color); }
+.story-level { font-style: italic; color: #888; margin-top: -1em; margin-bottom: 2em; }
 .story-content {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
+    font-size: 1.1rem; line-height: 1.8; color: #333;
 }
+.story-content p { margin-bottom: 1.5em; }
 
-.story-content p {
-    margin-bottom: 1.5em;
-}
-
-
-/* --- 6. Simple Tooltip Box (NEW) --- */
+/* --- 6. Simple Tooltip Box --- */
 #vocab-tooltip {
-    /* This creates the floating box */
-    position: absolute;
-    z-index: 10;
-    
-    /* Styling */
-    background-color: #222;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    position: absolute; z-index: 1000;
+    background-color: #222; color: #fff;
+    padding: 8px 12px; border-radius: 5px; font-size: 0.9em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 250px;
-    text-align: center;
-    
-    /* Animation */
+    max-width: 250px; text-align: center;
     transition: opacity 0.1s ease-out;
-    
-    /* Positioning (JS will set top/left) */
-    /* This transform centers the tooltip *above* the word */
     transform: translate(-50%, -100%); 
-    
-    /* Prevents mouse from flickering */
     pointer-events: none; 
 }
-
-/* This is the class our JS adds/removes */
-.hidden {
-    opacity: 0;
-    pointer-events: none; /* Make sure it's hidden */
-}
-
-#vocab-tooltip:not(.hidden) {
-    opacity: 1;
-}
-
+#vocab-tooltip.hidden { opacity: 0; }
+#vocab-tooltip:not(.hidden) { opacity: 1; }
 
 /* --- 7. Mobile Responsiveness --- */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    header {
-        padding: 15px 25px;
-    }
-
-    .story-container {
-        padding: 30px;
-    }
-
-    .story-header {
-        margin-top: 15px;
-        padding: 0 10px;
-    }
+    body { font-size: 16px; }
+    main { padding: 15px; }
+    header { padding: 15px 25px; }
+    .story-container { padding: 30px; }
+    .story-header { margin-top: 15px; padding: 0 10px; }
 }
